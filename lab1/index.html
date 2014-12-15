@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html ng-app="demo">
+<html ng-app="LemonAide">
 <head>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/960.css"/>
     <style>
         [ng-cloak] {
             display: none;
         }
     </style>
+    <title>Lemon-Aide: Helping those lemonade vendors</title>
 </head>
 
-<body ng-cloak>
-<h1>Sample Angular Application</h1>
+<body ng-cloak class="container_16">
+<div ng-controller="LemonAideController">
+    <header>
+        <div class="prefix_1 grid_15">
+            <h1>Lemon-Aide: Helping those lemonade vendors</h1>
+            <time class="date">{{la_date.now | date:'MMMM dd, yyyy'}}</time>
+        </div>
+    </header>
 
-<div class="container">
-    <div>
-        <p>2 + 5 = {{2 + 5}}</p>
+    <div class="prefix_2 grid_14">
+        <section>
+            <h2>Sell</h2>
+            <ul>
+                <li><a href="#" ng-click="largeGlassClick()">Large glass of lemonade <mark>{{la_values.largeGlass}}</mark></a>
+                </li>
+                <li><a href="#" ng-click="mediumGlassClick()">Medium glass of lemonade <mark>{{la_values.mediumGlass}}</mark></a>
+                </li>
+                <li><a href="#" ng-click="healthySnackClick()">Healthy snack <mark>{{la_values.healthySnack}}</mark></a>
+                </li>
+                <li><a href="#" ng-click="treatClick()">Treat <mark>{{la_values.treat}}</mark></a></li>
+            </ul>
+        </section>
+
+        <section class="">
+            <p>Transaction Quantity: {{la_values.totalQuantity}} products</p>
+
+            <p>Transaction Cost: {{la_values.totalCost}} products</p>
+        </section>
+
+        <button ng-click="clearClick()">Clear Transaction</button>
     </div>
+
+    <footer>Junk Footer</footer>
 </div>
 
-<h1>Hello, {{ name || "world" }}</h1>
-<input type="text" name="name" ng-model="name" placeholder="what is your name" />
 
 <script type="text/javascript" src="js/angular-1.2.27.js"></script>
 <script type="text/javascript" src="js/script.js"></script>

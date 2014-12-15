@@ -1,0 +1,18 @@
+header {
+    height: 100px;
+    color: #FFFFFF;
+    background-color: darkblue;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header .date {
+    outline-color: #FFFFFF;
+    background-color: darkslateblue;
+}
+
+ul {
+    list-style: none;
+}
