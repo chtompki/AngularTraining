@@ -1,3 +1,5 @@
+angular.module('demo', []);
+
 (function (){
     var testVariable = "test";
 
@@ -6,5 +8,5 @@
         console.log('test')
     }
 
-    testFunction()
+    testFunction();
 })();
