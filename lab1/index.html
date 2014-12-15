@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html ng-app="demo">
 <head>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/angular-1.2.27.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
-<body>
+<body ng-cloak>
 <h1>Sample Angular Application</h1>
 
 <div class="container">
@@ -17,6 +21,7 @@
 <h1>Hello, {{ name || "world" }}</h1>
 <input type="text" name="name" ng-model="name" placeholder="what is your name" />
 
+<script type="text/javascript" src="js/angular-1.2.27.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
