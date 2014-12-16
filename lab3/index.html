@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="LemonAide">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/960.css"/>
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+    <title>Lemon-Aide: Helping those lemonade vendors</title>
+</head>
+
+<!--<body ng-cloak class="container_16">-->
+<body ng-cloak>
+
+<div class="container_16" ng-controller="HeaderController">
+    <header>
+        <div class="prefix_1 grid_15">
+            <h1>Lemon-Aide: Helping those lemonade vendors</h1>
+            <time class="date">{{la_date.now | date:'MMMM dd, yyyy'}}</time>
+        </div>
+    </header>
+</div>
+
+<div ng-view></div>
+
+<div class="container_16" ng-controller="FooterController">
+    <footer class="prefix_1">
+        <nav>
+            <a ng-class="{'in-active' : areaStatus, 'active' : !areaStatus}" href="#/home" ng-click="areaStatus = false">Home</a>
+            <a ng-class="{'active' : areaStatus, 'in-active' : !areaStatus}" href="#/lemonaide" ng-click="areaStatus = true">Lemonaide</a>
+        </nav>
+    </footer>
+</div>
+
+
+<script type="text/javascript" src="js/libs/angular-1.2.27.js"></script>
+<script type="text/javascript" src="js/libs/angular-route-1.2.27.js"></script>
+<script type="text/javascript" src="js/lab2.js"></script>
+<script type="text/javascript" src="js/lab2-routing.js"></script>
+</body>
+</html>
