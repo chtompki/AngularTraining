@@ -16,3 +16,38 @@ header .date {
 ul {
     list-style: none;
 }
+
+footer {
+    height: 100px;
+    color: #FFFFFF;
+    background-color: darkblue;
+}
+
+footer a:visited {
+    color: #FFFFFF;
+}
+
+footer a {
+    color: #FFFFFF;
+    padding-right: 20px;
+}
+
+footer a:hover {
+    color: #AAAAAA;
+}
+
+.main_area {
+    height: 150px;
+}
+
+nav {
+    padding-top: 20px;
+}
+
+.active {
+     background-color: darkslateblue;
+ }
+
+.in-active {
+    background-color: darkblue;
+}

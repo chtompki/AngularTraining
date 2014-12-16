@@ -1,7 +1,7 @@
-angular.module('LemonAide', []);
+angular.module('LemonAide1', []);
 
 (function (){
-    angular.module('LemonAide').controller('LemonAideController', function ($scope) {
+    angular.module('LemonAide1').controller('LemonAideController1', function ($scope) {
         $scope.la_date = {
             now: Date.now()
         }

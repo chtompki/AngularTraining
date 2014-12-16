@@ -1,0 +1,26 @@
+<div>
+    <div class="container_16 main_area">
+        <div class="prefix_2 grid_14">
+            <section ng-controller="LemonAideProductController">
+                <h2>Sell</h2>
+                <ul>
+                    <li><a href="#/lemonaide" ng-click="largeGlassClick()">Large glass of lemonade <mark>{{la_values.largeGlass}}</mark></a>
+                    </li>
+                    <li><a href="#/lemonaide" ng-click="mediumGlassClick()">Medium glass of lemonade <mark>{{la_values.mediumGlass}}</mark></a>
+                    </li>
+                    <li><a href="#/lemonaide" ng-click="healthySnackClick()">Healthy snack <mark>{{la_values.healthySnack}}</mark></a>
+                    </li>
+                    <li><a href="#/lemonaide" ng-click="treatClick()">Treat <mark>{{la_values.treat}}</mark></a></li>
+                </ul>
+            </section>
+
+            <section class="">
+                <p>Transaction Quantity: {{la_values.totalQuantity}} products</p>
+
+                <p>Transaction Cost: {{la_values.totalCost}} products</p>
+            </section>
+
+            <button ng-click="clearClick()">Clear Transaction</button>
+        </div>
+    </div>
+</div>
