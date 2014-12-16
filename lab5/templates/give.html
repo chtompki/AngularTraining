@@ -1,0 +1,43 @@
+<div class="container_16 main_area">
+    <div class="prefix_2 grid_14">
+        <section ng-controller="GiveController">
+            <h2 class="page_header">{{page.heading}}</h2>
+
+            <p>
+                Name: <input ng-model="give.name" ng-required="true" ng-minlength="3" />
+            </p>
+
+            <p>
+                Phone Number: <input ng-model="give.phone" />
+            </p>
+
+            <p>
+                Address:<br/>
+                <input ng-model="give.addressLine1"/><br>
+                <input ng-model="give.addressLine2"/><br>
+                City:
+                <input ng-model="give.city"/><br>
+                State:
+                <select ng-model="give.stateAbbreviation" ng-options="state.abbreviation for state in states"></select><br>
+                Zip: <input />
+            </p>
+            <p>
+                Email Address: <input type="email" name="email" ng-model="give.email"/>
+            </p>
+            <p>
+                Best Mechanism of Contact:
+                <form>
+                    <input type="radio" name="give.contact" checked>EMail
+                    <br>
+                    <input type="radio" name="give.contact">Phone
+                    <br>
+                    <input type="radio" name="give.contact">Snail Mail
+                </form>
+            </p>
+            <button ng-click="givingSubmission()">Submit</button>
+
+            <div ui-view></div>
+
+        </section>
+    </div>
+</div>
