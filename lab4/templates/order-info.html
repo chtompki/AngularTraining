@@ -1,0 +1,25 @@
+<div class="container_16 main_area">
+    <div class="prefix_2 grid_14">
+        <section ng-controller="OrderInfoController">
+            <h2 class="page_header">{{page.heading}}</h2>
+            <p>How many rows would you like to see</p>
+            <input ng-model="table.rowLimit" type="number" max="{{table.maxRow}}" min="1"/>
+            <br />
+            <br />
+            <table class="order_info">
+                <tr class="table_head_row">
+                    <td ng-click="onDateClick()">Date</td>
+                    <td ng-click="onQuantityClick()">Quantity</td>
+                    <td ng-click="onNetSalesClick()">Net Sales</td>
+                    <td ng-click="onCostOfGoodsClick()">Cost of Goods</td>
+                </tr>
+                <tr ng-repeat="row in orderInfo | limitTo: table.rowLimit | orderBy: table.orderBy" ng-class="{even: $even, odd: $odd}">
+                    <td>{{row.date | date:'MMM dd, yyyy'}}</td>
+                    <td>{{row.quantity}}</td>
+                    <td>{{row.netSale}}</td>
+                    <td>{{row.costOfGoods}}</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</div>

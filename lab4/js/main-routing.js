@@ -10,6 +10,11 @@ angular.module('LemonAide').config(['$stateProvider', '$urlRouterProvider', func
             templateUrl: 'templates/lemon-aide.html',
             controller: 'LemonAideController'
         });
+    $stateProvider.state('orderInfo', {
+        url: '/orderInfo',
+        templateUrl: 'templates/order-info.html',
+        controller: 'LemonAideController'
+    });
     $stateProvider.state('lemonaide.lemonade', {
         url: '/lemonade',
         templateUrl: 'templates/sell-lemonade.html',
