@@ -1,0 +1,34 @@
+<div>
+    <div class="container_16 main_area">
+        <div class="prefix_2 grid_14">
+            <section ng-controller="LemonAideProductController">
+                <h2 class="page_header">{{page.heading}}</h2>
+                <ul class="prefix_1">
+                    <li><a class="product" ui-sref="lemonaide" ng-click="largeGlassClick()">Large glass of lemonade <mark>{{la_values.largeGlass}}</mark></a></br>
+                        <a class="prefix_1" ui-sref="lemonaide.lemonade">About</a></br></br>
+                    </li>
+                    <li><a class="product" ui-sref="lemonaide" ng-click="mediumGlassClick()">Medium glass of lemonade <mark>{{la_values.mediumGlass}}</mark></a></br>
+                        <a class="prefix_1" ui-sref="lemonaide.lemonade">About</a></br></br>
+                    </li>
+                    <li><a class="product" ui-sref="lemonaide" ng-click="healthySnackClick()">Healthy snack <mark>{{la_values.healthySnack}}</mark></a></br>
+                        <a class="prefix_1" ui-sref="lemonaide.healthySnacks">About</a></br></br>
+                    </li>
+                    <li>
+                        <a class="product" ui-sref="lemonaide" ng-click="treatClick()">Treat <mark>{{la_values.treat}}</mark></a></br>
+                        <a class="prefix_1" ui-sref="lemonaide.treats">About</a></br></br>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="">
+                <p>Transaction Quantity: {{la_values.totalQuantity}} products</p>
+
+                <p>Transaction Cost: {{la_values.totalCost}} products</p>
+            </section>
+
+            <button ng-click="clearClick()">Clear Transactions</button>
+
+            <div class="" ui-view></div>
+        </div>
+    </div>
+</div>
