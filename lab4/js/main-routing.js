@@ -13,7 +13,7 @@ angular.module('LemonAide').config(['$stateProvider', '$urlRouterProvider', func
     $stateProvider.state('orderInfo', {
         url: '/orderInfo',
         templateUrl: 'templates/order-info.html',
-        controller: 'LemonAideController'
+        controller: 'OrderInfoController'
     });
     $stateProvider.state('lemonaide.lemonade', {
         url: '/lemonade',
