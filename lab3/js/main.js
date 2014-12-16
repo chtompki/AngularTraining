@@ -1,4 +1,4 @@
-angular.module('LemonAide', ['ngRoute']);
+angular.module('LemonAide', ['ui.router']);
 
 (function (){
     angular.module('LemonAide').controller('HeaderController', function($scope){
@@ -7,15 +7,29 @@ angular.module('LemonAide', ['ngRoute']);
         };
     });
 
-    angular.module('LemonAide').controller('HomeController', function($scope) {
-        //Empty for now
-    });
+    angular.module('LemonAide').controller('HomeController', ['$rootScope', '$scope', function($rootScope, $scope) {
+        $scope.page = {heading: "Home"};
+    }]);
 
-    angular.module('LemonAide').controller('FooterController', function($scope) {
-        $scope.areaStatus = false;
-    });
+    angular.module('LemonAide').controller('LemonadeController', ['$rootScope', '$scope', function($rootScope, $scope) {
+        $scope.page = {heading: "Lemonade"};
+    }]);
 
-    angular.module('LemonAide').controller('LemonAideController', function($scope) {
+    angular.module('LemonAide').controller('HealthySnacksController', ['$rootScope', '$scope', function($rootScope, $scope) {
+        $scope.page = {heading: "Healthy Snacks"};
+    }]);
+
+    angular.module('LemonAide').controller('TreatsController', ['$rootScope', '$scope', function($rootScope, $scope) {
+        $scope.page = {heading: "Treats"};
+    }]);
+
+    //angular.module('LemonAide').controller('FooterController', function($scope) {
+    //    $scope.areaStatus = false;
+    //});
+
+    angular.module('LemonAide').controller('LemonAideController', ['$rootScope', '$scope', function($rootScope, $scope) {
+
+        $scope.page = {heading: "Sell"};
 
         var largeGlass = 0;
         var mediumGlass = 0;
@@ -45,7 +59,7 @@ angular.module('LemonAide', ['ngRoute']);
                 totalCost: calculateCost(largeGlass, mediumGlass, healthySnack, treat)
             }
         };
-    });
+    }]);
 
     angular.module('LemonAide').controller('LemonAideProductController', function($scope) {
         var largeGlass = $scope.la_values.largeGlass;

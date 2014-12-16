@@ -10,7 +10,7 @@
             display: none;
         }
     </style>
-    <title>Lemon-Aide: Helping those lemonade vendors</title>
+    <title>Lemon-Aide: Helping those lemonade vendors {{page.heading}}</title>
 </head>
 
 <!--<body ng-cloak class="container_16">-->
@@ -25,20 +25,21 @@
     </header>
 </div>
 
-<div ng-view></div>
+<div class="main_area" ui-view></div>
 
-<div class="container_16" ng-controller="FooterController">
+<div class="container_16">
     <footer class="prefix_1">
         <nav>
-            <a ng-class="{'in-active' : areaStatus, 'active' : !areaStatus}" href="#/home" ng-click="areaStatus = false">Home</a>
-            <a ng-class="{'active' : areaStatus, 'in-active' : !areaStatus}" href="#/lemonaide" ng-click="areaStatus = true">Lemonaide</a>
+            <a ui-sref="home" ui-sref-active="active">Home</a>
+            <a ui-sref="lemonaide" ui-sref-active="active">Lemonaide</a>
         </nav>
     </footer>
 </div>
 
 
 <script type="text/javascript" src="js/libs/angular-1.2.27.js"></script>
-<script type="text/javascript" src="js/libs/angular-route-1.2.27.js"></script>
+<!--<script type="text/javascript" src="js/libs/angular-route-1.2.27.js"></script>-->
+<script type="text/javascript" src="js/libs/angular-ui-router-0.2.13.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/main-routing.js"></script>
 </body>

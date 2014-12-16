@@ -5,7 +5,7 @@ header {
 }
 
 header h1 {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 header .date {
@@ -37,7 +37,7 @@ footer a:hover {
 }
 
 .main_area {
-    height: 150px;
+    height: 450px;
 }
 
 nav {
@@ -50,4 +50,12 @@ nav {
 
 .in-active {
     background-color: darkblue;
+}
+
+.product {
+    font-size: 24px;
+}
+
+.page_header {
+    font-size: 30px;
 }

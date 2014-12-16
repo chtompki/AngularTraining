@@ -1,14 +1,28 @@
-angular.module('LemonAide').config(function($routeProvider){
-    $routeProvider.
-        when('/home', {
+angular.module('LemonAide').config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+    $urlRouterProvider.otherwise('/');
+    $stateProvider.state('home', {
+            url: '/',
             templateUrl: 'templates/main-page.html',
             controller: 'HomeController'
-        }).
-        when('/lemonaide', {
+        });
+    $stateProvider.state('lemonaide', {
+            url: '/lemonaide',
             templateUrl: 'templates/lemon-aide.html',
             controller: 'LemonAideController'
-        }).
-        otherwise({
-            redirectTo: '/home'
         });
-});
+    $stateProvider.state('lemonaide.lemonade', {
+        url: '/lemonade',
+        templateUrl: 'templates/sell-lemonade.html',
+        controller: 'LemonadeController'
+    });
+    $stateProvider.state('lemonaide.healthySnacks', {
+        url: '/healthySnacks',
+        templateUrl: 'templates/sell-healthy-snacks.html',
+        controller: 'HealthySnacksController'
+    });
+    $stateProvider.state('lemonaide.treats', {
+        url: '/treats',
+        templateUrl: 'templates/sell-treats.html',
+        controller: 'TreatsController'
+    });
+}]);
