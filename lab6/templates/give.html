@@ -1,9 +1,9 @@
 <div class="container_16 main_area">
-    <div class="prefix_2 grid_14">
+    <div class="prefix_1 grid_14">
         <section ng-controller="GiveController">
-            <h2 class="page_header">{{page.heading}}</h2>
+            <h2 lemon-aide-header>{{page.heading}}</h2>
 
-            <form name="giverInformation" novalidate class="css-form" ng-submit="update()">
+            <form class="prefix_1" name="giverInformation" novalidate class="css-form" ng-submit="update()">
                 Name: <input name="userName" type="text" ng-model="user.name" ng-minlength="3" ng-required="true" ng-pattern="/[a-zA-Z]/"/>
                 <span class="validation_text" ng-show="giverInformation.userName.$dirty &&
                                                     giverInformation.userName.$invalid && giverInformation.userName.$error.pattern"> Please contain a letter</span>

@@ -5,7 +5,7 @@ angular.module('LemonAide').controller('OrderInfoController', ['$rootScope', '$s
 
     $scope.page = {
         heading: "Order Info"
-    }
+    };
 
     var orderInfoPre = [{
         date: '1-1-2012',
