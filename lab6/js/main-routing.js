@@ -15,6 +15,12 @@ angular.module('LemonAide').config(['$stateProvider', '$urlRouterProvider', func
         templateUrl: 'templates/order-info.html',
         controller: 'OrderInfoController'
     });
+
+    $stateProvider.state('orderInfoCards', {
+        url: '/orderInfoCards',
+        templateUrl: 'templates/order-info-cards.html',
+        controller: 'OrderInfoCardsController'
+    });
     $stateProvider.state('give', {
         url: '/give',
         templateUrl: 'templates/give.html',
