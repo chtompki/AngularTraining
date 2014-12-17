@@ -5,11 +5,11 @@
             Yikes! We can't run out of product. Make sure levels are good. We can run out to the store if we get low.
         </p><br />
         <div class="ranges" ng-if="success">
-            Lemonade (in cups) {{supplies.lemonade}} out of {{supplies.lemonadeMax}},<br />
+            Lemonade (in cups) <mark>{{supplies.lemonade}}</mark> out of {{supplies.lemonadeMax}},<br />
             <input type="range" min="0" max="{{supplies.lemonadeMax}}" ng-model="supplies.lemonade"/><br />
-            Fruit (in pieces) {{supplies.fruit}} out of {{supplies.fruitMax}}, <br />
+            Fruit (in pieces) <mark>{{supplies.fruit}}</mark> out of {{supplies.fruitMax}}, <br />
             <input type="range" min="0" max="{{supplies.fruitMax}}" ng-model="supplies.fruit"/><br />
-            Treats (in count) {{supplies.treat}} out of {{supplies.treatMax}},<br />
+            Treats (in bags) <mark>{{supplies.treat}}</mark> out of {{supplies.treatMax}},<br />
             <input type="range" min="0" max="{{supplies.treatMax}}" ng-model="supplies.treat"/><br />
             <input type="reset" value="Reset Supplies" ng-click="resetSupplies()"/><br />
         </div>
