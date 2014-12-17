@@ -1,33 +1,25 @@
-angular.module('LemonAide').controller('LemonAideController', ['$rootScope', '$scope', function($rootScope, $scope) {
+angular.module('LemonAide').controller('LemonAideController', ['$rootScope', '$scope', 'ProductService', function($rootScope, $scope, ProductService) {
 
     $scope.page = {heading: "Sell"};
 
-    var largeGlass = 0;
-    var mediumGlass = 0;
-    var healthySnack = 0;
-    var treat = 0;
-
     $scope.la_values = {
-        largeGlass: largeGlass,
-        mediumGlass: mediumGlass,
-        healthySnack: healthySnack,
-        treat: treat,
-        totalQuantity: calculateTotalProducts(largeGlass, mediumGlass, healthySnack, treat),
-        totalCost: calculateCost(largeGlass, mediumGlass, healthySnack, treat)
+        largeGlass: ProductService.getLargeGlass(),
+        mediumGlass: ProductService.getMediumGlass(),
+        healthySnack: ProductService.getHealthySnack(),
+        treat: ProductService.getTreat(),
+        totalQuantity: ProductService.getProductQuantity(),
+        totalCost: ProductService.getTotalProductCost()
     };
 
     $scope.clearClick = function() {
-        largeGlass = 0;
-        mediumGlass = 0;
-        healthySnack = 0;
-        treat = 0;
+        ProductService.clearProducts();
         $scope.la_values = {
-            largeGlass: largeGlass,
-            mediumGlass: mediumGlass,
-            healthySnack: healthySnack,
-            treat: treat,
-            totalQuantity: calculateTotalProducts(largeGlass, mediumGlass, healthySnack, treat),
-            totalCost: calculateCost(largeGlass, mediumGlass, healthySnack, treat)
-        }
+            largeGlass: ProductService.getLargeGlass(),
+            mediumGlass: ProductService.getMediumGlass(),
+            healthySnack: ProductService.getHealthySnack(),
+            treat: ProductService.getTreat(),
+            totalQuantity: ProductService.getProductQuantity(),
+            totalCost: ProductService.getTotalProductCost()
+        };
     };
 }]);
