@@ -1,0 +1,18 @@
+<div class="container_16 main_area">
+    <section class="prefix_1 supplies">
+        <h2 lemon-aide-header>{{page.heading}}</h2>
+        <p>
+            Yikes! We can't run out of product. Make sure levels are good. We can run out to the store if we get low.
+        </p><br />
+        <div class="ranges" ng-if="success">
+            Lemonade (in cups) {{supplies.lemonade}} out of {{supplies.lemonadeMax}},<br />
+            <input type="range" min="0" max="{{supplies.lemonadeMax}}" ng-model="supplies.lemonade"/><br />
+            Fruit (in pieces) {{supplies.fruit}} out of {{supplies.fruitMax}}, <br />
+            <input type="range" min="0" max="{{supplies.fruitMax}}" ng-model="supplies.fruit"/><br />
+            Treats (in count) {{supplies.treat}} out of {{supplies.treatMax}},<br />
+            <input type="range" min="0" max="{{supplies.treatMax}}" ng-model="supplies.treat"/><br />
+            <input type="reset" value="Reset Supplies" ng-click="resetSupplies()"/><br />
+        </div>
+        <div ng-if="!success">The http request failed to get the current levels.</div>
+    </section>
+</div>
