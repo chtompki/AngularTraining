@@ -1,0 +1,136 @@
+header {
+    height: 100px;
+    color: #FFFFFF;
+    background-color: darkblue;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+header .date {
+    outline-color: #FFFFFF;
+    background-color: darkslateblue;
+}
+
+ul {
+    list-style: none;
+}
+
+footer {
+    padding-top: 30px !important;
+    height: 70px;
+    color: #FFFFFF;
+    background-color: darkblue;
+}
+
+footer a:visited {
+    color: #FFFFFF;
+}
+
+footer a {
+    margin-top: 20px;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+footer a:hover {
+    color: #AAAAAA;
+}
+
+.main_area {
+    height: auto;
+}
+
+nav {
+    padding-top: 20px;
+}
+
+.active {
+     background-color: darkslateblue;
+ }
+
+.in-active {
+    background-color: darkblue;
+}
+
+.product {
+    font-size: 24px;
+}
+
+.page_header {
+    font-size: 30px;
+}
+
+.table_head_row {
+    font-size: 24px;
+    border-style: solid;
+    border-width: 1px;
+    width: auto;
+}
+
+.table_head_row td{
+    width: 150px;
+    cursor: pointer;
+}
+
+.order_info {
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.order_info td {
+    text-align: center;
+}
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+}
+
+.validation_text {
+    color: red;
+}
+
+.lemonReportListing {
+    border: 1px solid black;
+    border-radius: 0.3em;
+    display: inline-block;
+    list-style-type: none;
+    margin: 1em;
+    padding: 0.3em;
+    width: 10em;
+}
+
+.lemonReportListing:hover {
+    border-color: #ccc;
+    cursor: pointer;
+}
+
+.lemonReportListing header, .lemonReportListing footer {
+    background-color: rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.lemonReportListing footer {
+    padding: 0.2em;
+}
+
+.lemonReportListing footer img {
+    border-radius: 3em;
+    display: inline-block;
+    width: 15px;
+}
+
+.lemonReportListing section {
+    margin: 0.5em;
+}
+
+.lemonReportListing.selected {
+    border-color: #ccc;
+}
+
+.odd {
+    background-color: orange;
+}

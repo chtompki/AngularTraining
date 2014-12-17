@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="LemonAide">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/960.css"/>
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+    <title>Lemon-Aide: Helping those lemonade vendors {{page.heading}}</title>
+</head>
+
+<!--<body ng-cloak class="container_16">-->
+<body ng-cloak>
+
+<div class="container_16" ng-controller="HeaderController">
+    <header>
+        <div class="prefix_1 grid_15">
+            <h1>Lemon-Aide: Helping those lemonade vendors</h1>
+            <time class="date">{{la_date.now | date:'MMMM dd, yyyy'}}</time>
+        </div>
+    </header>
+</div>
+
+<div class="main_area" ui-view></div>
+
+<div class="container_16">
+    <footer class="prefix_1">
+        <nav>
+            <a ui-sref="home" ui-sref-active="active">Home</a>
+            <a ui-sref="lemonaide" ui-sref-active="active">Lemonaide</a>
+            <a ui-sref="orderInfo" ui-sref-active="active">Order Info</a>
+            <a ui-sref="orderInfoCards" ui-sref-active="active">Order Info Cards</a>
+            <a ui-sref="give" ui-sref-active="active">Give</a>
+        </nav>
+    </footer>
+</div>
+
+
+<script type="text/javascript" src="js/libs/angular-1.2.27.js"></script>
+<!--<script type="text/javascript" src="js/libs/angular-route-1.2.27.js"></script>-->
+<script type="text/javascript" src="js/libs/angular-ui-router-0.2.13.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/main-routing.js"></script>
+<script type="text/javascript" src="js/GiveController.js"></script>
+<script type="text/javascript" src="js/HeaderController.js"></script>
+<script type="text/javascript" src="js/HealthySnacksController.js"></script>
+<script type="text/javascript" src="js/HomeController.js"></script>
+<script type="text/javascript" src="js/LemonadeController.js"></script>
+<script type="text/javascript" src="js/LemonAideController.js"></script>
+<script type="text/javascript" src="js/LemonAideProductController.js"></script>
+<script type="text/javascript" src="js/OrderInfoCardsController.js"></script>
+<script type="text/javascript" src="js/OrderInfoController.js"></script>
+<script type="text/javascript" src="js/ProductService.js"></script>
+<script type="text/javascript" src="js/ThankYouController.js"></script>
+<script type="text/javascript" src="js/TreatsController.js"></script>
+</body>
+</html>
