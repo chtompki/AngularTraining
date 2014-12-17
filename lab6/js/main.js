@@ -4,9 +4,19 @@ angular.module('LemonAide').directive('lemonAideHeader', function() {
     return {
         restrict: 'EA',
         replace: true,
-        scope: {},
         transclude: true,
         template: '<h2 class="page_header" ng-transclude></h2>'
+    };
+});
+
+angular.module('LemonAide').directive('lemonAideFocus', function() {
+    return {
+        restrict: 'EA',
+        replace: false,
+        template: '',
+        link: function(scope, element, attrs) {
+            element[0].focus()
+        }
     };
 });
 

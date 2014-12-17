@@ -4,7 +4,7 @@
             <h2 lemon-aide-header>{{page.heading}}</h2>
 
             <form class="prefix_1" name="giverInformation" novalidate class="css-form" ng-submit="update()">
-                Name: <input name="userName" type="text" ng-model="user.name" ng-minlength="3" ng-required="true" ng-pattern="/[a-zA-Z]/"/>
+                Name: <input lemon-aide-focus name="userName" type="text" ng-model="user.name" ng-minlength="3" ng-required="true" ng-pattern="/[a-zA-Z]/"/>
                 <span class="validation_text" ng-show="giverInformation.userName.$dirty &&
                                                     giverInformation.userName.$invalid && giverInformation.userName.$error.pattern"> Please contain a letter</span>
                 <span class="validation_text" ng-show="giverInformation.userName.$dirty &&
