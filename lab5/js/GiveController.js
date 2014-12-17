@@ -1,7 +1,7 @@
 /**
  * Created by tompkicr on 12/16/14.
  */
-angular.module('LemonAide').controller('GiveController', ['$rootScope', '$scope', function($rootScope, $scope) {
+angular.module('LemonAide').controller('GiveController', ['$rootScope', '$scope', '$state', function($rootScope, $scope, $state) {
 
     $scope.page = {
         heading: "Giving"
@@ -248,8 +248,7 @@ angular.module('LemonAide').controller('GiveController', ['$rootScope', '$scope'
 
     $scope.states = states;
 
-    $scope.givingSubmission = function() {
-        //do the giving
-    }
-
+    $scope.update = function() {
+        $state.go('give.thankYou');
+    };
 }]);

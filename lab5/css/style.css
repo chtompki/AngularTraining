@@ -85,3 +85,11 @@ nav {
 .even {
     background: #CCCCCC;
 }
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+}
+
+.validation_text {
+    color: red;
+}

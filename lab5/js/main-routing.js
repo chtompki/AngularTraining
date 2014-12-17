@@ -22,7 +22,7 @@ angular.module('LemonAide').config(['$stateProvider', '$urlRouterProvider', func
     });
     $stateProvider.state('give.thankYou', {
         url: '/thankYou',
-        templateUrl: 'templates/give.html',
+        templateUrl: 'templates/thank-you.html',
         controller: 'GiveController'
     });
     $stateProvider.state('lemonaide.lemonade', {
