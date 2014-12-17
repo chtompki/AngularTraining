@@ -19,7 +19,7 @@ ul {
 
 footer {
     padding-top: 30px !important;
-    height: 70px;
+    padding-bottom: 30px !important;
     color: #FFFFFF;
     background-color: darkblue;
 }
@@ -32,14 +32,19 @@ footer a {
     margin-top: 20px;
     color: #FFFFFF;
     padding: 20px;
+    text-decoration: none !important;
 }
 
 footer a:hover {
-    color: #AAAAAA;
+    color: #FFFFFF;
 }
 
 .main_area {
     height: auto;
+}
+
+.home {
+    height: 400px;
 }
 
 nav {
