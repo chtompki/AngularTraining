@@ -1,0 +1,37 @@
+<div class="container_16 main_area">
+    <div class="prefix_1 grid_14">
+        <section ng-controller="GiveController">
+            <h2 lemon-aide-header>{{page.heading}}</h2>
+
+            <form class="prefix_1" name="giverInformation" novalidate class="css-form" ng-submit="update()">
+                Name: <input lemon-aide-focus name="userName" type="text" ng-model="user.name" ng-minlength="3" ng-required="true" ng-pattern="/[a-zA-Z]/"/>
+                <span class="validation_text" ng-show="giverInformation.userName.$dirty &&
+                                                    giverInformation.userName.$invalid && giverInformation.userName.$error.pattern"> Please contain a letter</span>
+                <span class="validation_text" ng-show="giverInformation.userName.$dirty &&
+                                                    giverInformation.userName.$invalid && giverInformation.userName.$error.minlength"> Please enter at least 3 characters</span><br />
+                Phone Number: <input name="userPhoneNumber" type="text" ng-model="user.phoneNumber" ng-pattern="/^\d{0,9}(\.\d{1,9})?$/" />
+                <span class="validation_text" ng-show="giverInformation.userPhoneNumber.$dirty &&
+                                                giverInformation.userPhoneNumber.$invalid &&
+                                                giverInformation.userPhoneNumber.$error.pattern"> Please enter a valid telephone number in the form XXX.XXXXXXX.</span><br />
+                Address: <br />
+                <input name="userAddressLine1" type="text" ng-model="user.addressLine1" /><br />
+                <input name="userAddressLine2" type="text" ng-model="user.addressLine2" /><br />
+                City: <input name="userCity" type="text" ng-model="user.city" /><br />
+                State: <select name="userState" ng-model="user.stateAbbreviation" ng-options="state.abbreviation for state in states"></select><br />
+                Zip-Code: <input name="userZip" type="text" ng-model="user.zip" ng-required="true" ng-pattern="/^(\d{5}-\d{4}|\d{5})$/"/>
+                <span class="validation_text" ng-show="giverInformation.userZip.$dirty &&
+                                                giverInformation.userZip.$invalid && giverInformation.userZip.$error.pattern"> Please enter a valid zip-code.</span><br />
+                E-mail: <input name="userEmail" type="email" ng-model="user.email" />
+                <span class="validation_text" ng-show="giverInformation.userEmail.$dirty &&
+                                                giverInformation.userEmail.$invalid"> Please enter a valid e-mail address.</span><br />
+                Preferred contact: <input type="radio" ng-model="user.contact" value="email" />E-mail
+                <input type="radio" ng-model="user.contact" value="mail" />Snail-mail
+                <input type="radio" ng-model="user.contact" value="phone" />Phone<br />
+                <input type="submit" value="Submit" ng-disabled="giverInformation.$invalid"/>
+            </form>
+
+            <div ui-view></div>
+
+        </section>
+    </div>
+</div>
