@@ -78,14 +78,11 @@ nav {
     border-style: solid;
     border-width: 1px;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .order_info td {
     text-align: center;
-}
-
-.even {
-    background: #CCCCCC;
 }
 
 input.ng-invalid.ng-dirty {
