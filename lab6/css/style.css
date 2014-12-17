@@ -18,7 +18,8 @@ ul {
 }
 
 footer {
-    height: 100px;
+    padding-top: 30px !important;
+    height: 70px;
     color: #FFFFFF;
     background-color: darkblue;
 }
@@ -28,8 +29,9 @@ footer a:visited {
 }
 
 footer a {
+    margin-top: 20px;
     color: #FFFFFF;
-    padding-right: 20px;
+    padding: 20px;
 }
 
 footer a:hover {
