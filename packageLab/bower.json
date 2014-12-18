@@ -1,0 +1,16 @@
+{
+  "name": "packageLab",
+  "version": "0.0.0",
+  "homepage": "https://github.com/chtompki/AngularTraining",
+  "authors": [
+    "Rob Tompkins <chtompki@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
