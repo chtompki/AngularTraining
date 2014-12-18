@@ -1,4 +1,8 @@
-angular.module('LemonAide', ['ui.router']);
+angular.module('LemonAide', ['ngResource', 'ui.router']);
+
+angular.module('LemonAide').run(['CostService', function(CostService) {
+    CostService.retrieveCosts();
+}]);
 
 angular.module('LemonAide').directive('lemonAideHeader', function () {
     return {
@@ -61,11 +65,3 @@ angular.module('LemonAide').directive('lemonReportListing', function () {
         }
     };
 });
-
-function calculateTotalProducts(largeGlass, meduimGlass, healthySnack, treat) {
-    return largeGlass + meduimGlass + healthySnack + treat;
-}
-
-function calculateCost(largeGlass, mediumGlass, healthySnack, treat) {
-    return largeGlass * 2 + mediumGlass + healthySnack * 2 + treat * 0.5;
-}
